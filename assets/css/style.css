@@ -1,0 +1,270 @@
+body {
+    background: linear-gradient(120deg, #f0f1f6, #dfe9f3);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin-top: 60px;   /* même valeur que le header height */
+    margin-bottom: 40px;/* même valeur que le footer height */
+    padding-top: 56px;    /* la hauteur de la navbar fixe */
+    padding-bottom: 50px; /* la hauteur du footer fixe */
+    margin: 0;
+    padding: 56px 0 40px 0;
+}
+
+/* Appliquer l'image de fond uniquement à la .homepage */
+/*.homepage {
+    background: url('../images/festival-aurillac.jpg') center/cover no-repeat fixed;
+    color: #fff;
+}*/
+
+/* Appliquer l'image à la hero-section, 
+   mais seulement si on est dans le body#homepage */
+   #homepage .hero-section {
+    /* Chemin de l'image => adapter selon votre arborescence */
+    background-image: url('../images/festival-aurillac.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /* Hauteur de la section (ex. 70% de la hauteur écran) */
+    height: 60vh;
+    margin-top: 60px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;;
+}
+
+/* Overlay pour assombrir l'image si vous voulez un effet */
+#homepage .hero-section .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% d'opacité */
+    z-index: 1; /* Sous le texte */
+}
+
+/* Le contenu par-dessus l'image */
+#homepage .hero-section .content {
+    position: relative;
+    z-index: 2; /* Au-dessus de l'overlay */
+    /* Vous pouvez ajouter du padding / stylage de texte */
+}
+
+/* Les éléments en bas de page (événements) ne sont pas affectés */
+.container {
+    background-color: #fff;  /* Fond blanc si nécessaire */
+    /* margin-top: 20px; si vous voulez plus d'espace */
+}
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-section {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    z-index:0;
+}
+
+.hero-section .content {
+    z-index:1;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 220px;
+    margin: 1px; /* Réduit l'espacement autour des cartes */
+}
+
+
+.card-body {
+    padding: 0.5rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.card-title, .card-text {
+    font-size: 0.9rem;
+}
+
+/* Réduction de l'espace entre les colonnes et les lignes */
+.row .col-md-4, .row .col-lg-3, .row .col-6 {
+    margin-bottom: 3px; /* Réduit l'espace vertical entre les cartes */
+}
+
+.row {
+    gap:0,01px; /* Réduit l'espace horizontal entre les colonnes */
+}
+
+
+
+
+/* Navbar icon size */
+.navbar-nav .nav-link i.fas {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+input, select, button {
+    border-radius: 0;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Réduire la largeur du champ de recherche */
+.search-input {
+    flex: 0 0 200px; /* Largeur fixe de 200px */
+    max-width: 200px; /* Limite la largeur à 200px */
+}
+
+/* Réduire la largeur de la liste déroulante */
+.category-select {
+    flex: 0 0 150px; /* Largeur fixe de 150px */
+    max-width: 180px; /* Limite la largeur à 150px */
+}
+
+/* Ajuster le bouton pour qu'il ne s'étire pas */
+form.d-flex .btn {
+    flex-shrink: 0; /* Garde le bouton à sa taille normale */
+}
+
+
+
+
+
+h6{
+    color: red;
+}
+
+
+/*Le style pour creer evenemt
+/* style.css */
+
+/* Fond dégradé pour la page */
+
+
+/* style.css */
+
+/* Fond dégradé pour la page */
+body {
+    background: linear-gradient(120deg, #f0f1f6, #dfe9f3);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.creer-evenement-container {
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+/* Titre plus stylé */
+.creer-evenement-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Formulaire : ombre + fond blanc */
+.form-evenement {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+/* Labels du formulaire plus petits */
+.form-evenement label.form-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Champs plus compacts (Bootstrap .form-control-sm déjà appliqué) */
+.form-evenement .form-control-sm, 
+.form-evenement .form-select-sm {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Bouton créer l'événement */
+.btn-creer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+    background: #3498db;
+    border: none;
+    transition: background 0.3s ease;
+}
+.btn-creer:hover {
+    background: #2980b9;
+}
+
+/* Responsif : si l’écran est petit, on réduit la taille du titre */
+@media (max-width: 576px) {
+    .creer-evenement-title {
+        font-size: 1.5rem;
+    }
+    .form-evenement {
+        padding: 1rem;
+    }
+    .form-evenement .form-control-sm {
+        font-size: 0.82rem;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Ajustez la hauteur */
+    background-color: #3498db;
+    color: #fff;
+    z-index: 9999;
+    /* éventuellement display: flex; align-items: center; pour aligner le contenu */
+}
+
+footer {
+    background-color: #f8f9fa; /* Fond clair */
+    color: #000; /* Texte noir */
+    border-top: 1px solid #ddd; /* Ligne séparatrice */
+    font-size: 14px; /* Taille de texte réduite mais lisible */
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0; /* Supprime les marges */
+    font-weight: 400; /* Poids de texte normal */
+    text-align: center; /* Centre le texte horizontalement */
+    
+}
+
